@@ -5,3 +5,18 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+:root {
+  --primary-text: #283841;
+  --secondary-text: #6B7280;
+}
+
+body {
+  color: var(--primary-text);
+}
+
+.text-secondary {
+  color: var(--secondary-text);
+}
+.bg-secondary {
+  background-color: #dedfe1;
+}
