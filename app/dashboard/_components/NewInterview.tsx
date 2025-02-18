@@ -66,12 +66,12 @@ const NewInterview = () => {
                 }
               />
             </div>
+            <DialogFooter>
+              <Button type="submit" className="bg-black hover:bg-black/80">
+                Start Interview
+              </Button>
+            </DialogFooter>
           </form>
-          <DialogFooter>
-            <Button type="submit" className="bg-black hover:bg-black/80">
-              Start Interview
-            </Button>
-          </DialogFooter>
         </DialogContent>
       </Dialog>
     </div>
