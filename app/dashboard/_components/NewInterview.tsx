@@ -40,26 +40,33 @@ const NewInterview = () => {
               of experience
             </DialogDescription>
           </DialogHeader>
-          <div className="gap-4 py-4">
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="name" className="text-right">
-                Job Position
-              </Label>
-              <Input id="name" className="col-span-3" required />
+          <form onSubmit={onSubmit}>
+            <div className="mt-2 my-3">
+              <label>Job Position</label>
+              <Input
+                placeholder="e.g Frontend Developer"
+                required
+                onChange={(event) => setJobPosition(event.target.value)}
+              />
             </div>
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="username" className="text-right">
-                Job Description
-              </Label>
-              <Textarea id="username" className="col-span-3" required />
+            <div className="my-3">
+              <label>Job Description</label>
+              <Textarea onChange={(event) => setJobDesc(event.target.value)} />
             </div>
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="username" className="text-right">
-                Years of Experience
-              </Label>
-              <Input id="username" className="col-span-3" max={20} />
+            <div className="my-3">
+              <label>Years of Experience</label>
+              <Input
+                placeholder="5"
+                type="number"
+                max={20}
+                min={0}
+                required
+                onChange={(event) =>
+                  setJobExperience(Number(event.target.value))
+                }
+              />
             </div>
-          </div>
+          </form>
           <DialogFooter>
             <Button type="submit" className="bg-black hover:bg-black/80">
               Start Interview
